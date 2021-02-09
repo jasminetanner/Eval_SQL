@@ -12,7 +12,7 @@ https://drive.google.com/drive/folders/1SXIZSuC3_z-LII9aW5M0yAZfheu-VzSN
 #10: SELECT MIN(film.id) AS 'min id film' FROM film, genre WHERE genre.nom = 'comedy' AND film.genre_id = genre.id;
 #11: SELECT (titre), (date_debut_affiche), (date_fin_affiche), TIMEDIFF(date_fin_affiche, date_debut_affiche) AS 'temps_affiche' FROM film WHERE date_debut_affiche IS NOT NULL AND date_fin_affiche IS NOT NULL;
 #12: SELECT (SELECT COUNT(*) FROM abonnement WHERE id != 0) AS 'nombre_abonnement', AVG(prix) AS 'moyenne_abonnement', (SELECT COUNT(*) FROM membre WHERE abo_id != 0) AS 'nombre_abonnees' FROM abonnement WHERE id != 0;
-#13: SELECT (SELECT COUNT(*) FROM abonnement WHERE id != 0) AS 'nombre_abonnement', AVG(prix) AS 'moyenne_abonnement', (SELECT COUNT(*) FROM membre WHERE abo_id != 0) AS 'nombre_abonnees' FROM abonnement WHERE id != 0;
+#13: SELECT (nom), (pourcentage_reduc) FROM reduction WHERE pourcentage_reduc >= 0 AND pourcentage_reduc != 25 ORDER BY pourcentage_reduc DESC;
 #14: SELECT (nom_salle) FROM salle WHERE (nbr_siege BETWEEN 100 AND 300) AND etage_salle = 2;
 #15: SELECT (nom) AS 'nom_genre', MAX(duree_min) AS 'duree_min' FROM genre, film WHERE genre.id = genre_id GROUP BY nom;
 #16: SELECT SUM(nbr_siege) AS 'nbr place' FROM salle WHERE etage_salle = 1;
