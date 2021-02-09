@@ -1,5 +1,3 @@
-https://drive.google.com/drive/folders/1SXIZSuC3_z-LII9aW5M0yAZfheu-VzSN
-
 #1: SELECT LCASE (titre) AS "Titres films",genre_id FROM film WHERE genre_id IN (1,2,3) AND titre LIKE '%E';
 #2: SELECT (titre) AS 'titre_film', duree_min AS 'duree_film', resum AS 'resume_film' FROM film;
 #3: SELECT LCASE (titre) AS 'titres_min' FROM film WHERE id BETWEEN 43 AND 83;
